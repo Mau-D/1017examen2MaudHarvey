@@ -50,7 +50,7 @@ export default {
         text-align: center;
         padding: 0;
         margin: 0;
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba(255, 255, 255, 0.9);
         padding: 5%;
     }
     p{
@@ -58,7 +58,7 @@ export default {
         font-size: 1.4rem;
         padding: 0;
         margin: 0;
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba(255, 255, 255, 0.9);
         padding: 5%;
     }
 </style>
