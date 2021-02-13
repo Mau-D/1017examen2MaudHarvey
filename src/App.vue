@@ -8,6 +8,7 @@
     </header>
     <main>
       <component :is="displayedComponent"></component>
+      <!--<contact-formulaire></contact-formulaire>  -->
     </main>
     <footer>
       <pied-de-page></pied-de-page>
@@ -20,6 +21,8 @@ import EnTete from './components/EnTete.vue'
 import PageAccueil from './views/PageAccueil.vue'
 import PiedDePage from './components/PiedDePage.vue'
 import UserLogged from './views/UserLogged.vue'
+//import ContactFormulaire from './views/ContactFormulaire.vue'
+
 
 export default {
   name: 'App',
@@ -33,13 +36,13 @@ export default {
     EnTete,
     PageAccueil,
     PiedDePage,
-    UserLogged
+    UserLogged,
+    //ContactFormulaire
   },
   //Fonction qui vérifie si un utilisateur est connecté
   //Selon la valeur booléenne de loggedIn le nom du composant à afficher est entré dans la variable displayedComponent
   //Avec une balise <component> et un v-bind:is, le composant est afficher au bon endroit
   created: function () {
-    console.log(this.loggedIn)
     if(this.loggedIn){
       this.displayedComponent = "UserLogged"
     }else{

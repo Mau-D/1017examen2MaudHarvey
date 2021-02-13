@@ -2,36 +2,35 @@
 <!--Maud Harvey, 12 février 2021-->
 <template>
 <div>
-    <h1>Maud Harvey</h1>
+    <h1>{{informations.contact.nom}}</h1>
     <div id="logged">
         <!-- Profil de l'utilisateur -->
         <div class="flex">
             <h1>Votre profil</h1>
-            <h4>Développeur Front-End Junior</h4>
-            <h3>Région du Saguenay-Lac-St-Jean</h3>
-            <h2>Travailleur autonome, pigiste</h2>
+            <h2>{{informations.profil.titre}}</h2>
+            <h3>{{informations.profil.region}}</h3>
+            <h2>{{informations.profil.emploi}}</h2>
         </div>
         <!-- Langages de programmation -->
         <div class="flex">
             <h1>Langages de programmation</h1>
             <ul>
-                <li>HTML 5</li>
-                <li>CSS 3</li>
-                <li>Javascript</li>
+                <li v-for="langage in informations.langages" :key="langage">{{langage}}</li>
             </ul>
         </div>
         <!-- Formations -->
         <div class="flex">
             <h1>Formations</h1>
-            <h3>Attestation d'études collégiales en développement Front-End</h3>
-            <h2>Cégep de Trois-Rivières</h2>
-            
+            <div v-for="formation in informations.formations" :key="formation.diplome">
+                <h2>{{formation.diplome}}</h2>
+                <h4>{{formation.etablissement}}</h4>
+            </div>
         </div>
         <!-- Contact -->
         <div class="flex">
             <h1>Contact</h1>
-            <h3>Maud Harvey</h3>
-            <h2>harveymaud@gmail.com</h2>
+            <h3>{{informations.contact.nom}}</h3>
+            <h2>{{informations.contact.courriel}}</h2>
         </div>
         <!-- Expériences -->
         <div class="flex">
@@ -41,29 +40,81 @@
                     <tr>
                         <th>Années</th>
                         <th>Description</th>
+                        <th>Employeur</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>2006-2019</td>
-                        <td>Technicienne en travaux pratiques</td>
+                    <tr v-for="experience in informations.experiences" :key="experience.annee">
+                        <td>{{experience.annee}}</td>
+                        <td>{{experience.description}}</td>
+                        <td>{{experience.employeur}}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-  </div>
+       <!-- <div class="projets">
+            <projets-liste></projets-liste>
+        </div>  -->
+    </div>  
 </div>
 </template>
 
 <script>
+
+//import ProjetsListe from './ProjetsListe.vue'
+
 export default {
-  name: 'user-logged',
-  
+    //components: { ProjetsListe },
+    name: 'user-logged',
+    data: function () {
+        return {
+            informations:{
+                id:"user1",
+                profil:{
+                    titre:"Développeur Front-End Junior",
+                    region:"Région du Saguenay-Lac-St-Jean",
+                    emploi:"Travailleur autonome, pigiste"
+                },
+                langages:["HTML5", "CSS3", "Javascript"],
+                formations:[
+                    {
+                    diplome:"Attestation d'études collégiales en développement Front-End",
+                    etablissement:"Cégep de Trois-Rivières"
+                    },
+                    {
+                    diplome:"Diplôme collégial en technologie physique",
+                    etablissement:"Cégep André-Laurendeau"
+                    }
+                    ],
+                    contact:{
+                        nom:"Maud Harvey",
+                        courriel:"harveymaud@gmail.com"
+                    },
+                experiences:[
+                    {
+                        annee:"2006-2019",
+                        description:"Technicienne en travaux pratiques",
+                        employeur:"Commission scolaire de l'Énergie"
+                    },
+                        {
+                        annee:"2004-2006",
+                        description:"Technicienne en travaux pratiques",
+                        employeur:"Cégep André-Laurendeau"
+                    }
+                ]
+            }
+            
+        }
+    }
+    
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+    table{
+        border-spacing: 2rem;
+    }
     h1{
         text-align: center;
         color: #1A8FD5;
@@ -93,6 +144,12 @@ export default {
     }
     table{
         margin: auto;
+    }
+    .projets{
+        width: 100%;
+        border: 2px solid #1A8FD5;
+        margin: 2%;
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
 </style>
