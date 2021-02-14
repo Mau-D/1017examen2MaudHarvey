@@ -1,8 +1,7 @@
 <!--ProjetsListe.vue,views / Liste des projets, examen 2-->
 <!--Maud Harvey, 12 février 2021-->
 <template>
-    <div>
-        <h2>Liste des projets</h2>
+    <div id="projets">
         <ul>
             <li v-for="projet in projets" :key="projet.id">
                 <div>
@@ -71,6 +70,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+    #projets{
+        background-image: url("../assets/img/profil.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: blue;
+        background-size: cover;
+    }
+    ul, li{
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 5%;
+        margin: 5%;
+        border: 2px solid #1A8FD5;
+    }
     h1{
         text-align: center;
         color: #1A8FD5;

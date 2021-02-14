@@ -7,8 +7,8 @@
       <en-tete></en-tete>
     </header>
     <main>
-      <component :is="displayedComponent"></component>
-      <!--<contact-formulaire></contact-formulaire>  -->
+      <!--<component :is="displayedComponent"></component> -->
+       <router-view/>
     </main>
     <footer>
       <pied-de-page></pied-de-page>
@@ -18,9 +18,9 @@
 
 <script>
 import EnTete from './components/EnTete.vue'
-import PageAccueil from './views/PageAccueil.vue'
+//import PageAccueil from './views/PageAccueil.vue'
 import PiedDePage from './components/PiedDePage.vue'
-import UserLogged from './views/UserLogged.vue'
+//import UserLogged from './views/UserLogged.vue'
 //import ContactFormulaire from './views/ContactFormulaire.vue'
 
 
@@ -28,25 +28,27 @@ export default {
   name: 'App',
   data: function () {
     return {
-      loggedIn: true,
+      loggedIn: false,
       displayedComponent: ""
     }
   },
   components: {
     EnTete,
-    PageAccueil,
+   // PageAccueil,
     PiedDePage,
-    UserLogged,
-    //ContactFormulaire
+    //UserLogged,
+   
   },
   //Fonction qui vérifie si un utilisateur est connecté
   //Selon la valeur booléenne de loggedIn le nom du composant à afficher est entré dans la variable displayedComponent
   //Avec une balise <component> et un v-bind:is, le composant est afficher au bon endroit
   created: function () {
     if(this.loggedIn){
-      this.displayedComponent = "UserLogged"
+       this.$router.push("/connexion")
+      //this.displayedComponent = "UserLogged"
     }else{
-     this.displayedComponent = "PageAccueil"
+      this.$router.push("/")
+     //this.displayedComponent = "PageAccueil"
     }
   }
 }
