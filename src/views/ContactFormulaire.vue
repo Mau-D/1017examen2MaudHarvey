@@ -3,7 +3,14 @@
 <template>
     <div id="pageContact" class="container-fluid">           
       <fieldset>
-        <legend><h1>Demande d'informations</h1></legend>
+        <legend><h1>{{ "title" | languageFilter(languageChoosen)}}</h1></legend>
+           <!-- Dropdown pour le choix de la langue -->
+        <div class="dropdown">
+          <button class="dropbtn">{{languageChoosen}}</button>
+          <div class="dropdown-content">
+            <a @click="toggleLanguage(language)" v-for="language in languages" :key="language">{{language}}</a>
+          </div>
+        </div>    
         <div v-if="erreurs.length">
           <b>Corriger les erreurs suivantes:</b>
           <ul>
@@ -14,26 +21,26 @@
         </div>
         <form id="formContact"  @submit="checkForm" novalidate=true>  
             <div class="form-group enligne">
-              <label for="nom">Nom</label><br>
+              <label for="nom">{{ "name" | languageFilter(languageChoosen)}}</label><br>
               <input v-model="nom" required type="text" id="nom" aria-describedby="nom">
             </div>
             <div class="form-group enligne">
-                <label for="prenom">Prénom</label><br>
+                <label for="prenom">{{ "firstname" | languageFilter(languageChoosen)}}</label><br>
                 <input v-model="prenom" required type="text" id="prenom" aria-describedby="prenom">
             </div>     
             <div class="form-group">
-                <label for="courriel">Courriel</label><br>
+                <label for="courriel">{{ "email" | languageFilter(languageChoosen)}}</label><br>
                 <input v-model="courriel" required type="email" id="courriel" name="courriel" aria-describedby="email"><br>
                 <small id="emailHelp">Le courriel doit être valide</small>
             </div>               
             <div  class="form-group">
-                <label class="my-1 mr-2" for="subjects">Catégorie</label><br>
+                <label class="my-1 mr-2" for="subjects">{{ "category" | languageFilter(languageChoosen)}}</label><br>
                 <select required v-model="sujetChoisi" id="subjects">  
                     <option v-for="sujet in sujets" :key="sujet">{{sujet}}</option>
                 </select>                               
             </div>
             <div  class="form-group">
-                <label for="question">Écrire votre question</label><br>
+                <label for="question">{{ "question" | languageFilter(languageChoosen)}}</label><br>
                 <textarea v-model="question" id="question" rows="3"></textarea><br>
                 <small>facultatif</small>
             </div>                
@@ -44,8 +51,10 @@
 </template>
 
 <script>
-  
+  import {TranslateMixin} from "../mixins/TranslateMixin"
+
   export default {
+    mixins:[TranslateMixin],
     name: 'contact-formulaire',
     data: function () {
       return {
@@ -160,6 +169,48 @@
   button:hover {
     background-color: #024257;
     }
+     /*Pour le dropdown, choix de la langue */
+  /* Dropdown Button */
+  .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
 </style>
 
 
