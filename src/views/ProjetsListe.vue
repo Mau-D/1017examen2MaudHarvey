@@ -25,6 +25,7 @@ export default {
   name: 'projets-liste',
   data: function () {
     return {
+        //Tableau de la description des différents projets
       projets:[
           {
               id: 1,
@@ -64,11 +65,10 @@ export default {
       ]
     }
   },
-  
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- Ajouter l'attribut "scoped"  pour limiter le CSS à ce composant seulement -->
 <style scoped>
     #projets{
         background-image: url("../assets/img/profil.jpg");

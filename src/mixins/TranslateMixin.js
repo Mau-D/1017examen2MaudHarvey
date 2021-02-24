@@ -1,5 +1,7 @@
 //TranslateMixin.js, mixins
 //Mixin pour traduire les libéllés du composant ContactFormulaire
+//Maud Harvey, 15 février 2021
+//Constante des valeurs des libellés selon la langue choisie
 const TRANSLATIONS = {
   en: {
     title: "Information request",
@@ -19,22 +21,23 @@ const TRANSLATIONS = {
   },
 };
 export const TranslateMixin = {
+  //Définition des données pour le choix de la langue
   data() {
     return {
       languages: ["en", "fr"],
       languageChoosen: "fr",
     };
   },
-
+  //Dans le composant ContactFormulaire.vue, lors de l'évènement clic sur le bouton du choix de la langue, cette méthode est appelée
   methods: {
     toggleLanguage: function(e) {
       this.languageChoosen = e;
       console.log("method " + this.languageChoosen);
     },
   },
-
+  //Filtre appliqué à chacuns des libellés dans le composant ContactFormulaire.vue
+  //Les paramètres de la langue choisie (lang) et la valeur du libellé (value) sont associé à la valeur de la constante TRANSLATIONS
   filters: {
-    //On pourrait ajouter une validation avec un if pour vérifier que l'élément value est bien une date
     languageFilter: function(value, lang) {
       if (lang === "fr") {
         if (value === "title") {

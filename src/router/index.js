@@ -6,7 +6,7 @@ import ProjetsListe from "../views/ProjetsListe.vue";
 import ContactFormulaire from "../views/ContactFormulaire.vue";
 
 Vue.use(VueRouter);
-
+//Définition des routes du menu de navigation du composant EnTete.vue
 const routes = [
   {
     path: "/",

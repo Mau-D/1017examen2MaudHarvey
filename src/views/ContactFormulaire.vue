@@ -9,8 +9,10 @@
           <button class="dropbtn">{{languageChoosen}}</button>
           <div class="dropdown-content">
             <a @click="toggleLanguage(language)" v-for="language in languages" :key="language">{{language}}</a>
+            <!-- Lors d'un évènement clic, méthode pour le changement de langue dans le mixin TranslateMixin.js  -->
           </div>
         </div>    
+        <!-- Affichage des erreurs dans la validation du formulaire -->
         <div v-if="erreurs.length">
           <b>Corriger les erreurs suivantes:</b>
           <ul>
@@ -74,7 +76,7 @@
     };
   },
   methods: {
-    //Fonction pour vérifier les champs requis et le pattern du email
+    //Méthode pour vérifier les champs requis et le pattern du email
     checkForm: function (e) {
       //Vider le tableau des erreurs
       this.erreurs = [];
@@ -108,7 +110,7 @@
   },
 }
 </script>
-
+<!-- Ajouter l'attribut "scoped"  pour limiter le CSS à ce composant seulement -->
 <style scoped>
   input, select{
     width: 50%;
@@ -169,8 +171,7 @@
   button:hover {
     background-color: #024257;
     }
-     /*Pour le dropdown, choix de la langue */
-  /* Dropdown Button */
+    /*Pour le dropdown, choix de la langue */
   .dropbtn {
     background-color: #4CAF50;
     color: white;
@@ -179,13 +180,13 @@
     border: none;
   }
 
-  /* The container <div> - needed to position the dropdown content */
+  /* Position du contenu dans le dropdown */
   .dropdown {
     position: relative;
     display: inline-block;
   }
 
-  /* Dropdown Content (Hidden by Default) */
+  /* Contenu du dropdown (Hidden by Default) */
   .dropdown-content {
     display: none;
     position: absolute;
@@ -195,7 +196,7 @@
     z-index: 1;
   }
 
-  /* Links inside the dropdown */
+  /* Liens du dropdown*/
   .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -203,13 +204,13 @@
     display: block;
   }
 
-  /* Change color of dropdown links on hover */
+  /* Changement de couleur lors du hover */
   .dropdown-content a:hover {background-color: #ddd;}
 
-  /* Show the dropdown menu on hover */
+  /* Montrer le menu du dropdown lors du hover */
   .dropdown:hover .dropdown-content {display: block;}
 
-  /* Change the background color of the dropdown button when the dropdown content is shown */
+  /* Change la couleur du background du bouton dropdown quand le menu du dropdown est visible */
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
 </style>
 

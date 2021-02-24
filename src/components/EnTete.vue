@@ -1,4 +1,4 @@
-<!--EnTete.vue,components / en-tête, examen 2-->
+<!--EnTete.vue,components / menu de navigation, examen 2-->
 <!--Maud Harvey, 11 février 2021-->
 <template>
     <div id="nav">
@@ -33,6 +33,7 @@
       }
     }
 </script>
+<!-- Ajouter l'attribut "scoped"  pour limiter le CSS à ce composant seulement -->
 <style scoped>
 #nav {
   padding: 30px;
@@ -42,7 +43,6 @@
   -moz-osx-font-smoothing: grayscale;
   background-color: #D0E0F0;
 }
-
 #nav a{
   font-weight: bold;
   color: #7AAC9F;
