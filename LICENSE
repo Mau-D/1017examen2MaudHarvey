@@ -2,6 +2,9 @@ MIT License
 
 Copyright (c) 2021 Maud Harvey
 
+Justification du choix de la license MIT:
+Puisque par défaut légal, le projet possède le droit d’auteur exclusif, la licence autorise les modifications, la distribution, sans code source, c'est une license open source populaire. Elle est courte, très facile à comprendre et permet à quiconque de faire quoi que ce soit tant qu’il conserve une copie de la licence, comprenant les droits d’auteur. Cette licenseest utile, car certaines dépendances exigent une license  et il y a la possibilité de lancer le projet sous une licence différente si vous en avez besoin. De plus, je n'es aucune obligation envers un employeur, client ou autres d'ajouter des restrictions sur le regard de mon travail.
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
