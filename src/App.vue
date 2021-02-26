@@ -26,6 +26,7 @@ import PiedDePage from './components/PiedDePage.vue'
 
 export default {
   name: 'App',
+ 
   data: function () {
     return {
       loggedIn: false,

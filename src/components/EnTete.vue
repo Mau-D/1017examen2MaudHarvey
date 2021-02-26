@@ -2,11 +2,12 @@
 <!--Maud Harvey, 11 février 2021-->
 <template>
     <div id="nav">
-      <router-link v-for="link in menu" :to="link.path" :key="link.titre">{{link.titre}}</router-link> 
+      <router-link v-for="link in menu" :to="link.path" :key="link.titre" :class="link.titre">{{link.titre}}</router-link> 
     </div>
     <!-- remplacer par :to, pour avoir le menu dynamique avec v-for -->
 </template>
 <script>
+
     export default {
       name: "en-tete",
       data: function () {
@@ -30,7 +31,7 @@
             }
           ]
         };
-      }
+      },
     }
 </script>
 <!-- Ajouter l'attribut "scoped"  pour limiter le CSS à ce composant seulement -->

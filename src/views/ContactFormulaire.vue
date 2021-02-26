@@ -8,7 +8,7 @@
         <div class="dropdown">
           <button class="dropbtn">{{languageChoosen}}</button>
           <div class="dropdown-content">
-            <a @click="toggleLanguage(language)" v-for="language in languages" :key="language">{{language}}</a>
+            <a class="traduction" @click="toggleLanguage(language)" v-for="language in languages" :key="language">{{language}}</a>
             <!-- Lors d'un évènement clic, méthode pour le changement de langue dans le mixin TranslateMixin.js  -->
           </div>
         </div>    
@@ -16,14 +16,14 @@
         <div v-if="erreurs.length">
           <b>Corriger les erreurs suivantes:</b>
           <ul>
-            <li v-for="erreur in erreurs" :key="erreur">
+            <li :class="error" v-for="erreur in erreurs" :key="erreur">
               {{erreur}}
             </li>
           </ul>
         </div>
-        <form id="formContact"  @submit="checkForm" novalidate=true>  
+        <form id="formContact"  @submit.prevent="checkForm" novalidate=true>  
             <div class="form-group enligne">
-              <label for="nom">{{ "name" | languageFilter(languageChoosen)}}</label><br>
+              <label class="nom" for="nom">{{ "name" | languageFilter(languageChoosen)}}</label><br>
               <input v-model="nom" required type="text" id="nom" aria-describedby="nom">
             </div>
             <div class="form-group enligne">
@@ -107,6 +107,7 @@
       var re = /[a-z]@[a-z].[a-z]/;
       return re.test(email);
     },
+   
   },
 }
 </script>
