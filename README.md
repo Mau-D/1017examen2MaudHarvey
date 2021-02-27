@@ -1,5 +1,6 @@
 # Examen2
-###Statut 
+
+## Statut 
 ```
 En développement  
 ```
@@ -24,28 +25,25 @@ Une page contact permet aux utilisateurs de poser une question à la communauté
 ```
 vue cli : npm install -g @vue/cli    
 vue router: npm install vue-router    
-jest: npm install --save-dev jest
-```
+jest: npm install --save-dev jest  
 
-## Project setup
 
-```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compile et rechargement pour le développement
 
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compile pour la production
 
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### Lints et fichiers fixes
 
 ```
 npm run lint
