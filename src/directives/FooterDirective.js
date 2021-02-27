@@ -7,7 +7,7 @@ import Vue from "vue";
 
 Vue.directive("footerdirective", {
   bind(el, binding) {
-    el.innerHTML = `Copyright Maud Harvey,  ` + binding.value;
+    el.innerHTML = `Copyright (c) ` + binding.value + ` Maud Harvey`;
   },
 });
 //Le paramètre el.innerHTML, permet d'insérer la valeur dans le html

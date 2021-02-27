@@ -5,7 +5,7 @@
     <div id="pageAccueil">
         <div id="banniere">
             <div class="centre">
-                <h1 class="titre">Regroupement de Dévelloppeur Front-End</h1>
+                <h1 class="titre">Regroupement de Développeur Front-End</h1>
                 <p>L’objectif général de l’AEC Développement Web vise à former des développeurs
                     « Front-end » aptes à programmer des applications Web « responsive », destinées 
                     aux utilisateurs de nouvelles technologies telles que les montres intelligentes, 

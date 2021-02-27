@@ -3,14 +3,16 @@
 
 <template>
 <!-- Une valeur de date est envoyé à la directive pour l'affichage du pied de page -->
-  <div><h2 v-footerdirective="new Intl.DateTimeFormat('fr-Ca', { dateStyle: 'full'}).format()"></h2></div>
+  <div><router-link :to="'/license'" v-footerdirective="2021"></router-link></div>
 </template>
 
 <script>
 import footerdirective from '../directives/FooterDirective'
+
 export default {
   name: 'pied-de-page',
-  directives:footerdirective
+  
+  directives:footerdirective,
 }
 </script>
 
@@ -22,5 +24,6 @@ export default {
     text-align: center;
     background-color: #D0E0F0;
     color: white;
+   
   }
 </style>
