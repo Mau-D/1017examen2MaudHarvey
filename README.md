@@ -15,11 +15,11 @@ Une page contact permet aux utilisateurs de poser une question à la communauté
 
 
 ## Technologies
-```
-[vue cli](https://cli.vuejs.org/guide/installation.html)
-[vue router](https://router.vuejs.org/installation.html)
-[jest](https://jestjs.io/docs/en/getting-started.html)
-```
+
+[vue cli](https://cli.vuejs.org/guide/installation.html)   
+[vue router](https://router.vuejs.org/installation.html)   
+[jest](https://jestjs.io/docs/en/getting-started.html)    
+
 
 ## Installation
 ```
