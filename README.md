@@ -1,16 +1,30 @@
 # Examen2
-
-## Table des matières
-
-1. [Présentation](#presentation)
-2. [Technologies](#technologies)
-3. [Installation](#installation)
-4. [Collaboration](#collaboration)
+###Statut 
+```
+En développement  
+```
 
 ## Présentation
 
 ```
-    Le site web est une plateforme regroupant des**développeurs Front-End**. Les utilisateurs connectés ont accès à leurs pages profils et de leurs projets. Une page contact permet aux utilisateurs de poser une question à la communauté inscrite.
+Le site web est une plateforme regroupant des _développeurs Front-End_ .   
+Les utilisateurs connectés ont accès à leurs pages de profil et à leurs projets.         
+Une page contact permet aux utilisateurs de poser une question à la communauté inscrite. 
+```
+
+
+## Technologies
+```
+[vue cli](https://cli.vuejs.org/guide/installation.html)
+[vue router](https://router.vuejs.org/installation.html)
+[jest](https://jestjs.io/docs/en/getting-started.html)
+```
+
+## Installation
+```
+vue cli : npm install -g @vue/cli    
+vue router: npm install vue-router    
+jest: npm install --save-dev jest
 ```
 
 ## Project setup
@@ -41,7 +55,7 @@ npm run lint
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-### Création de l'Application vueCLI
+### Création de l'Application vueCLI pour GitHub
 
 vue create 1017examen2maudharvey
 git pull
@@ -49,4 +63,3 @@ git add .
 git commit -m"test git commit"
 git push
 
-#Présentation
