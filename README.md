@@ -1,4 +1,17 @@
-# examen2
+# Examen2
+
+## Table des matières
+
+1. [Présentation](#presentation)
+2. [Technologies](#technologies)
+3. [Installation](#installation)
+4. [Collaboration](#collaboration)
+
+## Présentation
+
+```
+    Le site web est une plateforme regroupant des**développeurs Front-End**. Les utilisateurs connectés ont accès à leurs pages profils et de leurs projets. Une page contact permet aux utilisateurs de poser une question à la communauté inscrite.
+```
 
 ## Project setup
 
@@ -35,3 +48,5 @@ git pull
 git add .
 git commit -m"test git commit"
 git push
+
+#Présentation
