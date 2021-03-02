@@ -1,7 +1,8 @@
 {
   "name": "1017examen2maudharvey",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "./",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

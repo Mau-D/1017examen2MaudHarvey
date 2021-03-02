@@ -31,6 +31,32 @@ jest: npm install --save-dev jest
 npm install
 ```
 
+### Déploiement de l'application avec GitHub OnePage
+
+```
+1.Dans le fichier .gitignore commenter la ligne /build.
+2.Synchroniser le projet avec GitHub.
+3.Dans le fichier package.json
+Mettre le champ private à false.
+Ajouter sous "private" le champ "homepage": "./".
+4.Créer un fichier vue.config.js à la racine du projet.
+    Ajouter
+    module.exports = {
+        publicPath: "/1017examen2maudharvey/dist/",
+    };
+5. À la racine du projet : npm run build
+6. Synchroniser de nouveau le projet sur GitHub.
+7. Le projet sera déployé sur l'url suivant:
+https://mau-d.github.io/1017examen2maudharvey/dist/
+
+Les choix pour cette plateforme de déploiement
+1.Le projet se trouve déjà sur GitHub, pas besoin d'une autre dépendance.
+2.Les changements effectués sur le projet seront automatiquement ajoutés.
+Refaire un npm run build et une synchronisation du répertoire.
+3.Pas besoin de changer les fichiers dans la plateforme d'hébergement.
+4.Méthode déjà connu par l'utilisateur, simple et rapide.
+```
+
 ### Compile et rechargement pour le développement
 
 ```
