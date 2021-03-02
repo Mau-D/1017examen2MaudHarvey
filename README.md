@@ -46,7 +46,9 @@ Ajouter sous "private" le champ "homepage": "./".
     };
 5. À la racine du projet : npm run build
 6. Synchroniser de nouveau le projet sur GitHub.
-7. Le projet sera déployé sur l'url suivant:
+7. Dans le répertoire GitHub, dans les settings, ajuster la source de GitHub Pages
+avec la Branch:main et le dossier:/(root)
+8. Le projet sera déployé sur l'url suivant:
 https://mau-d.github.io/1017examen2maudharvey/dist/
 
 Les choix pour cette plateforme de déploiement
